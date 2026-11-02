@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy Monthsary, Bebu</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="petals"></div>
+
+<section id="gate">
+  <div class="lock" id="lock">
+    <div class="ico">💗</div>
+    <h1 class="script" style="font-size:34px">A Secret for You</h1>
+    <p>Only you can open this. Say the magic words out loud, 3 times, and a little louder each time!</p>
+    <div class="say script" id="say">“I love you”</div>
+    <div class="ring" id="ring"><span>🤍</span><span>🤍</span><span>🤍</span></div>
+    <div class="reply script" id="reply"></div>
+    <button class="btn" id="mic">🎤 Tap, then say it</button>
+    <div class="hint" id="hint"></div>
+    <details class="alt"><summary>Can’t speak right now?</summary><input id="pw" type="password" placeholder="Type the password" autocomplete="off"><br><button class="btn" id="unlock">Unlock ♥</button></details>
+  </div>
+</section>
+
+<div id="curtain">♥</div>
+<button id="burger" aria-label="Menu">☰</button>
+
+<div id="app">
+  <nav id="nav">
+    <div class="logo script">Our Monthsary<small>FOR MY FOREVER</small></div>
+    <button data-p="home" class="act">🏠 Home</button>
+    <button data-p="letter">💌 Love Letter</button>
+    <button data-p="reasons">🌹 Reasons I Love You</button>
+    <button data-p="story">📖 Our Story</button>
+    <button data-p="openwhen">✉️ Open When…</button>
+    <button data-p="coupons">🎟️ Love Coupons</button>
+    <button data-p="scratch">🎴 Scratch Card</button>
+    <button data-p="meter">💘 Love Meter</button>
+    <button data-p="stars">🌠 Wish on a Star</button>
+    <button data-p="quiz">🧩 Love Quiz</button>
+    <button data-p="surprise">🎁 Final Surprise</button>
+    <div class="foot">Made with ♥ only for you</div>
+  </nav>
+
+  <main>
+    <div class="page show" id="home">
+      <div class="hero">
+        <div class="script" style="font-size:28px;color:var(--wine-l)">Happy Monthsary,</div>
+        <div class="big script" id="herName">Bebu</div>
+        <p class="sub" style="margin-top:14px">Every second with you is my favorite one.</p>
+        <div class="counter">
+          <div><b id="cd">0</b><span>DAYS</span></div>
+          <div><b id="ch">0</b><span>HOURS</span></div>
+          <div><b id="cm">0</b><span>MINUTES</span></div>
+          <div><b id="cs">0</b><span>SECONDS</span></div>
+        </div>
+        <p>Tap around on the left — there’s a surprise in every corner. 💗</p>
+      </div>
+    </div>
+
+    <div class="page" id="letter">
+      <h2 class="script">A Letter For You</h2><p class="sub">Tap the envelope</p>
+      <div class="env" id="env">💌</div>
+      <div class="paper" id="paper"></div>
+    </div>
+
+    <div class="page" id="reasons">
+      <h2 class="script">Reasons I Love You</h2><p class="sub">Tap each rose to reveal</p>
+      <div class="grid" id="rgrid"></div>
+    </div>
+
+    <div class="page" id="story">
+      <h2 class="script">Our Story</h2><p class="sub">Hover over a moment to remember it</p>
+      <div class="tl" id="tl"></div>
+    </div>
+
+    <div class="page" id="openwhen">
+      <h2 class="script">Open When…</h2><p class="sub">Little notes for every mood</p>
+      <div class="grid" id="ogrid"></div>
+    </div>
+
+    <div class="page" id="coupons">
+      <h2 class="script">Love Coupons</h2><p class="sub">Tap to redeem — no expiry, I promise</p>
+      <div class="grid" id="cgrid"></div>
+    </div>
+
+    <div class="page" id="scratch">
+      <h2 class="script">Scratch Card</h2><p class="sub">Scratch with your finger or mouse to reveal your prize</p>
+      <div class="scratch"><div class="under" id="under"></div><canvas id="scr" width="300" height="160"></canvas></div>
+      <div style="text-align:center"><button class="btn" id="again">Another card ✨</button></div>
+    </div>
+
+    <div class="page" id="meter">
+      <h2 class="script">Love Meter</h2><p class="sub">Press and hold the button to measure my love for you</p>
+      <div class="meter"><div id="mfill"></div></div>
+      <div class="msg" id="mmsg">Love level: 0%</div>
+      <div style="text-align:center"><button class="btn" id="mbtn">Hold to measure 💘</button></div>
+    </div>
+
+    <div class="page" id="stars">
+      <h2 class="script">Wish on a Star</h2><p class="sub">Find all the stars in the night sky — <span id="stc">0</span>/<span id="stt">0</span> found</p>
+      <div class="sky" id="sky"></div>
+      <div class="msg" id="wish" style="margin-top:20px"></div>
+    </div>
+
+    <div class="page" id="quiz">
+      <h2 class="script">How Well Do You Know Us?</h2><p class="sub">Answer all the questions to win a prize</p>
+      <div class="paper" id="qbox" style="display:block;text-align:center"></div>
+    </div>
+
+    <div class="page" id="surprise">
+      <h2 class="script">The Final Surprise</h2><p class="sub">Open the gift, then catch 10 hearts to unlock my secret</p>
+      <button class="gift" id="gift">🎁</button>
+      <div class="msg" id="gmsg"></div>
+      <div class="game" id="game"><div class="score">Hearts: <span id="sc">0</span>/10</div></div>
+      <div class="secret" id="secret"></div>
+    </div>
+  </main>
+</div>
+
+<div id="modal"><div><p id="mtext"></p><button class="btn" id="mclose">Close ♥</button></div></div>
+
+<script src="script.js"></script>
+</body>
